@@ -177,3 +177,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
   startScrolling();
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the current date
+  const date = new Date();
+
+  // Array of month names
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
+  // Get the current month
+  const currentMonth = months[date.getMonth()];
+
+  // Insert the current month into the placeholder
+  const monthElements = document.querySelectorAll(".current-month");
+  console.log(monthElements);
+
+  // Insert the current month into each element
+  monthElements.forEach(function (element) {
+    element.textContent = currentMonth;
+  });
+});

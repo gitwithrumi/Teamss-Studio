@@ -122,21 +122,20 @@ h6 {
   font-weight: 600;
 }
 .section-common--subheading {
-  font-size: 24px;
-  font-weight: 300;
-  color: var(--secondary-grey);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--secondary-headings);
 }
 .section-common--para {
   font-size: 18px;
   font-weight: 100;
-  text-align: left;
 }
 .section-common--para span {
   font-size: 22px;
   font-weight: 100;
-  color: var(--secondary-headings);
+  color: var(--primary-headings);
 }
-.section-common--para span.danger {
+.section-common--para .danger {
   font-size: 20px;
   font-weight: 100;
   color: rgb(250, 48, 48);
@@ -148,6 +147,16 @@ h6 {
 #workBtn a button:hover {
   scale: 1.03;
   box-shadow: 7px 7px 0px -3px rgba(0, 0, 0, 0.4);
+}
+.hover-image {
+  overflow: hidden;
+  display: inline-block;
+}
+.hover-image img {
+  transition: all 0.3s ease-in-out;
+}
+.hover-image:hover img {
+  scale: 1.15;
 }
 
 /*** RESUSABLES END ***/
@@ -265,7 +274,7 @@ h6 {
 #hero {
   width: 100%;
   height: 110vh;
-  background-image: url("Images/photo\ studio.jpg");
+  background-image: url("Images/photo\ studio.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -581,3 +590,66 @@ h6 {
 }
 
 /*** FOOTER END ***/
+
+/*** GALLERY SECTION START ***/
+
+#gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0px;
+}
+#gallery1 {
+  display: flex;
+  align-items: center;
+}
+#gallery2 {
+  display: flex;
+  align-items: center;
+}
+#gallery img {
+  width: 200px;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin: 10px;
+}
+
+/*** GALLERY SECTION END ***/
+
+/*** ABOUT SECTION START ***/
+
+#about {
+  padding-top: 0px;
+  text-align: center;
+}
+
+/*** ABOUT SECTION END ***/
+
+/*** PACKAGES SECTION START ***/
+
+#wedding-package {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 120px;
+  padding-bottom: 0px;
+}
+#wedding-package #gallery {
+  padding-top: 20px;
+}
+#wedding-package > a img {
+  height: 400px;
+  width: 300px;
+  object-fit: contain;
+  border-radius: 20px;
+}
+#wedding-package > a {
+  cursor: zoom-in;
+}
+#wedding-package a {
+  color: #bbbdf3;
+}
+/*** PACKAGES SECTION END ***/
