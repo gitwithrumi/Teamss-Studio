@@ -225,11 +225,11 @@ h6 {
   color: var(--text-color);
 }
 .logo img {
-  height: 70px;
-  width: 100px;
-  object-fit: contain;
+  height: 60px;
+  width: 60px;
+  object-fit: cover;
   object-position: center;
-  border-radius: 10px;
+  border-radius: 50%;
 }
 .logo {
   padding-top: 10px;
@@ -309,7 +309,7 @@ h6 {
 #hero {
   width: 100%;
   height: 105vh;
-  background-image: url("Images/hero.jpg");
+  background-image: url("Images/img2.webp");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -320,7 +320,7 @@ h6 {
 }
 #hero h1 {
   color: var(--secondary-black);
-  font-size: 80px;
+  font-size: 70px;
   font-weight: 100;
   font-family: heroheading;
   width: 60%;
@@ -811,10 +811,10 @@ h6 {
     z-index: 99;
   }
   .logo img {
-    height: 65px;
-    width: 80px;
-    border-radius: 10px;
-    object-fit: contain;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
     object-position: center;
   }
   #nav-part--2 {
@@ -880,7 +880,7 @@ h6 {
     justify-content: center;
   }
   #hero h1 {
-    color: white;
+    color: var(--secondary-black);
     font-size: 40px;
     font-weight: 100;
     font-family: heroheading;
@@ -1346,10 +1346,10 @@ h6 {
     z-index: 99;
   }
   .logo img {
-    height: 60px;
-    width: 90px;
-    border-radius: 10px;
-    object-fit: contain;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    object-fit: cover;
     object-position: center;
   }
   #nav-part--2 {
