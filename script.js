@@ -1,3 +1,9 @@
+window.addEventListener("load", function () {
+  const loader = document.getElementById("loader");
+  const content = document.getElementById("content");
+  loader.style.display = "none";
+  content.style.display = "block";
+});
 AOS.init();
 const carousel = document.querySelector(".carousel");
 const slides = carousel.querySelectorAll(".slide");
