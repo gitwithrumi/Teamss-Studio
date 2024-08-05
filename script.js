@@ -1,3 +1,5 @@
+AOS.init();
+
 const carousel = document.querySelector(".carousel");
 const slides = carousel.querySelectorAll(".slide");
 const dotsContainer = carousel.querySelector(".dots");
