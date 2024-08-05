@@ -1,14 +1,14 @@
 @font-face {
   font-family: poppins;
-  src: url("fonts/Poppins-Medium.ttf");
+  src: url("Fonts/Poppins-Medium.ttf");
 }
 @font-face {
   font-family: heroheading;
-  src: url("fonts/AguafinaScript-Regular.ttf");
+  src: url("Fonts/AguafinaScript-Regular.ttf");
 }
 @font-face {
   font-family: headings;
-  src: url("fonts/DancingScript-Regular.ttf");
+  src: url("Fonts/DancingScript-Regular.ttf");
 }
 /*** BASE RULES START ***/
 * {
