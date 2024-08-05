@@ -507,8 +507,8 @@ h6 {
   justify-content: center;
 }
 #fashion-services img {
-  height: 300px;
-  width: 300px;
+  height: 200px;
+  width: 200px;
   object-fit: cover;
   border-radius: 20px;
 }
@@ -1192,6 +1192,543 @@ h6 {
 
   #works #gallery img {
     margin: 4px;
+  }
+
+  /*** WORKS GALLERY END ***/
+}
+
+@media screen and (max-width: 900px) and (min-width: 551px) {
+  :root {
+    --carousel-height: 300px;
+  }
+
+  /* layout */
+  .container {
+    max-width: 142rem;
+    margin: 0 auto;
+    padding: 96px 30px;
+  }
+  /* layout */
+
+  /*** RESUSABLES START ***/
+  #cta-div {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  #contactBtn a button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    background-color: var(--primary-cta);
+    border: 1px solid var(--primary-cta);
+    font-size: 20px;
+    color: var(--secondary-black);
+    font-weight: 900;
+    font-family: headings;
+    font-stretch: ultra-expanded;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+  #workBtn a button {
+    border: none;
+    border-radius: 8px;
+    padding: 10px 18px;
+    background-color: var(--secondary-cta);
+    border: 1px solid var(--secondary-cta);
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    font-family: headings;
+    font-stretch: ultra-expanded;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s ease;
+  }
+
+  .section-common--heading {
+    font-size: 26px;
+    font-weight: 100;
+    text-transform: capitalize;
+    color: var(--primary-headings);
+    text-shadow: 4px 3px 6px rgba(0, 0, 0, 0.2);
+    margin-bottom: 34px;
+    text-align: center;
+  }
+  .section-common--heading span {
+    color: var(--secondary-headings);
+    font-weight: 600;
+  }
+  .section-common--subheading {
+    font-size: 20px;
+    font-weight: 900;
+    color: var(--secondary-headings);
+  }
+  .section-common--para {
+    font-size: 15px;
+    font-weight: 100;
+  }
+  .section-common--para span {
+    font-size: 16px;
+    font-weight: 100;
+    color: var(--primary-headings);
+  }
+  .section-common--para .danger {
+    font-size: 17px;
+    font-weight: 100;
+    color: rgb(250, 48, 48);
+  }
+  #contactBtn a button:hover {
+    scale: 1.02;
+    box-shadow: 7px 7px 0px -3px rgba(0, 0, 0, 0.4);
+  }
+  #workBtn a button:hover {
+    scale: 1.02;
+    box-shadow: 7px 7px 0px -3px rgba(0, 0, 0, 0.4);
+  }
+  .hover-image {
+    overflow: hidden;
+    display: inline-block;
+  }
+  .hover-image img {
+    transition: all 0.3s ease-in-out;
+  }
+  .hover-image:hover img {
+    scale: 1.15;
+  }
+
+  /*** RESUSABLES END ***/
+
+  /*** NAVBAR START ***/
+
+  #nav {
+    height: 80px;
+    width: 100%;
+    background-color: var(--primary-light);
+    box-shadow: 0px 16px 8px -3px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+    position: fixed;
+    z-index: 99;
+  }
+  .logo img {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+  }
+  #nav-part--2 {
+    position: absolute;
+    left: -100%;
+    top: 0%;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--primary-light);
+    z-index: 999;
+    transition: 0.5s ease-out all;
+  }
+  #navbar-active {
+    display: none;
+  }
+  #navbar-active:checked ~ #nav-part--2 {
+    left: 0;
+  }
+  .open-navbar-button,
+  .close-navbar-button {
+    display: block;
+    transition: all 0.1s linear;
+  }
+  .open-navbar-button:active,
+  .close-navbar-button:active {
+    scale: 1.2;
+  }
+  #nav-part--2 ul label svg {
+    fill: var(--secondary-black);
+  }
+  #nav > label svg {
+    fill: var(--secondary-black);
+  }
+  #nav-part--2 ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 15px;
+    list-style: none;
+    margin: 15%;
+  }
+  #nav-part--2 a {
+    font-size: 40px;
+    font-weight: 300;
+    text-decoration: none;
+    color: var(--secondary-black);
+    font-family: poppins;
+  }
+
+  /*** NAVBAR END ***/
+
+  /*** HERO SECTION START ***/
+
+  #hero {
+    width: 100%;
+    height: 100vh;
+    background-image: url("Images/photo\ studio.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #hero h1 {
+    color: var(--text-color);
+    font-size: 50px;
+    font-weight: 100;
+    font-family: heroheading;
+    width: 70%;
+  }
+
+  /*** HERO SECTION END ***/
+
+  /*** CAROUSEL SECTION START ***/
+
+  .carousel {
+    width: 100%;
+    max-width: 500px;
+    height: var(--carousel-height);
+    position: relative;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.06),
+      0px 6px 24px 0px rgba(0, 0, 0, 0.12);
+    transition: var(--speed-slow) ease;
+  }
+  .slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: var(--speed-medium) ease;
+    &.active {
+      opacity: 1;
+    }
+  }
+
+  .slide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    img {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 8px;
+    }
+  }
+  .dots {
+    position: absolute;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+  }
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 5px;
+    cursor: pointer;
+    &.active {
+      background-color: white;
+    }
+  }
+
+  .timer {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    left: 8px;
+    height: 4px;
+    border-radius: 100vh;
+    background-color: var(--primary-light);
+    backdrop-filter: blur(8px);
+    width: 0;
+    z-index: 10;
+  }
+  .nav-arrow {
+    --arrow-width: 64px;
+    aspect-ratio: 1;
+    position: absolute;
+    top: calc(var(--carousel-height) / 2 - var(--arrow-width) / 2);
+    background: #fff;
+    transition: var(--speed-slow) ease;
+    width: 44px;
+    border-radius: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      transition: 0.2s ease-in-out;
+      fill: #000;
+    }
+    &:hover {
+      background-color: #000;
+      svg {
+        fill: #fff;
+      }
+      &.prev {
+        svg {
+          transform: translateX(-4px);
+        }
+      }
+
+      &.next {
+        svg {
+          transform: translateX(4px);
+        }
+      }
+    }
+    &.prev {
+      left: 0;
+      transform: translateX(-50%);
+    }
+    &.next {
+      right: 0;
+      transform: translateX(50%);
+    }
+  }
+
+  .pause-play-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    svg {
+      width: 10px;
+      height: 10px;
+      margin-right: 4px;
+    }
+    span {
+      white-space: nowrap;
+    }
+  }
+
+  /*** CAROUSEL SECTION END ***/
+
+  /*** MARQUEE SECTION START ***/
+
+  .marquee {
+    overflow-x: clip;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+  }
+
+  .marquee-inner {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    padding: 10vh 0;
+    will-change: transform;
+  }
+
+  .marquee-inner img {
+    height: 100%;
+    transition: transform 0.5s;
+    flex-shrink: 0;
+    width: 30vw;
+    border-radius: 2rem;
+  }
+
+  .marquee-inner img:hover {
+    transform: scale(1.03);
+  }
+
+  /*** MARQUEE SECTION END ***/
+
+  /*** FASHION SERVICES SECTION START ***/
+
+  #fashion-services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 0px;
+  }
+  #fashion-images--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #fashion-services img {
+    height: 100px;
+    width: 100px;
+    object-fit: contain;
+    border-radius: 20px;
+  }
+  #fashion-images--1 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  #fashion-images--2 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  #fashion-images--3 {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  /*** FASHION SERVICES SECTION END ***/
+
+  /*** REVIEWS SECTION START ***/
+
+  #reviews-section {
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #reviews-carousel {
+    margin: 20px 0px;
+  }
+
+  /*** REVIEWS SECTION END ***/
+
+  /*** FOOTER START ***/
+
+  .footer {
+    background-color: var(--primary-light);
+    color: var(--secondary-black);
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 14px;
+  }
+  .footer a img {
+    height: 100px;
+    width: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .footer h1 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  .footer p span {
+    font-size: 14px;
+  }
+
+  .footer .socials a {
+    font-size: 14px;
+  }
+
+  .footer a {
+    font-size: 13px;
+    color: var(--secondary-black);
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+  }
+
+  .footer a:hover {
+    color: var(--secondary-headings);
+  }
+
+  .copyright {
+    margin-top: 10px;
+    font-size: 10px;
+  }
+
+  /*** FOOTER END ***/
+
+  /*** GALLERY SECTION START ***/
+
+  #gallery {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0px;
+  }
+  #gallery1 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #gallery2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  #gallery img {
+    width: 20vw;
+    height: 30vh;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px;
+  }
+
+  /*** GALLERY SECTION END ***/
+
+  /*** PACKAGES SECTION START ***/
+
+  #wedding-package {
+    padding-top: 100px;
+    padding-bottom: 0px;
+  }
+  #wedding-packages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #wedding-packages > a img {
+    height: 70vh;
+    width: 60vw;
+    object-fit: contain;
+    border-radius: 20px;
+    margin-bottom: 0px;
+  }
+  #wedding-packages > a {
+    cursor: zoom-in;
+  }
+  #wedding-package a {
+    color: #bbbdf3;
+  }
+  /*** PACKAGES SECTION END ***/
+
+  /*** WORKS GALLERY SECTION ***/
+
+  #works #gallery img {
+    margin: 4px;
+    height: 20vh;
+    width: 15vw;
   }
 
   /*** WORKS GALLERY END ***/
