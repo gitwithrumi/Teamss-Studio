@@ -328,6 +328,20 @@ h6 {
 
 /*** HERO SECTION END ***/
 
+/*** LIMITED TIME OFFER START ***/
+
+#limited-offer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#limited-offer video{
+  height: 80vh;
+  width: 100%;
+}
+
+/*** LIMITED TIME OFFER END ***/
+
 /*** CAROUSEL SECTION START ***/
 
 .carousel {
